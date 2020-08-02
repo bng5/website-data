@@ -20,6 +20,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'bng5/website'
+          ref: 'master'
           submodules: 'true'
       - name: Install Dependencies
         run: npm install
