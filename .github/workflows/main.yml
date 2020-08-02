@@ -24,11 +24,9 @@ jobs:
       - name: Echo
         run: echo ${{ github.repository }}
       - name: Deploy
-        uses: reggionick/s3-deploy@v2
-        with:
-          folder: dist
-          bucket: ${{ secrets.S3_BUCKET }}
-          bucket-region: ${{ secrets.S3_BUCKET_REGION }}
-          dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-          invalidation: /
-          delete-removed: true
+        uses: lbertenasco/s3-deploy@v1
+          with:
+            folder: dist
+            bucket: ${{ secrets.S3_BUCKET }}
+            dist-id: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+            invalidation: / *
