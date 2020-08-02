@@ -21,8 +21,11 @@ jobs:
         with:
           repository: 'bng5/website-data'
           submodules: 'true'
-      - name: Echo
-        run: echo ${{ github.repository }}
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
       - name: Deploy
         uses: lbertenasco/s3-deploy@v1
         with:
