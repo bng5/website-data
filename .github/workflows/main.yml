@@ -19,9 +19,12 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: 'bng5/website'
-          ref: 'master'
-          submodules: 'true'
           token: ${{ secrets.GH_PAT }}
+
+      - name: Checkout Data
+        uses: actions/checkout@v2
+        with:
+          path: data
 
       - name: Install Dependencies
         run: npm install
