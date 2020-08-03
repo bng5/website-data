@@ -22,7 +22,7 @@ jobs:
           repository: 'bng5/website'
           ref: 'master'
           submodules: 'true'
-          token: ${{ secrets.GitHub_PAT }}
+          token: ${{ secrets.GH_PAT }}
       - name: Install Dependencies
         run: npm install
 
