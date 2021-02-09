@@ -27,7 +27,7 @@ jobs:
           path: data
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --only=prod
 
       - name: Build
         run: npm run build
